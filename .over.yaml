@@ -1,0 +1,8 @@
+package:
+  name: over
+  version: "0.0.1"
+  default: true
+  files:
+    - name: README.md
+      templates:
+        - https://img.shields.io/badge/version-__VERSION__-blue
