@@ -1,5 +1,5 @@
 /*
-Copyright © 2023 Vladimir Levin <opaozhub@gmail.com>
+Copyright ©2023 Vladimir Levin <opaozhub@gmail.com>
 */
 package main
 
