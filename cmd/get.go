@@ -10,7 +10,7 @@ import (
 var getCmd = &cobra.Command{
 	Use:   "get",
 	Short: "Get package version",
-	Long:  `TBD`,
+	Long:  `Get package version from .over.yaml file of current directory`,
 	RunE: func(cmd *cobra.Command, args []string) error {
 		cfg, err := config.ParseConfig()
 
