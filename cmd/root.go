@@ -11,7 +11,7 @@ import (
 var rootCmd = &cobra.Command{
 	Use:   "over",
 	Short: "Control version everywhere",
-	Long:  `TBD`,
+	Long:  `Semver-compatible monorepo-friendly version manager`,
 }
 
 var (
