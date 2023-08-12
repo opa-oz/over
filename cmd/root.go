@@ -2,6 +2,8 @@ package cmd
 
 import (
 	"fmt"
+	"github.com/spf13/cobra/doc"
+	"log"
 	"os"
 
 	"github.com/spf13/cobra"
@@ -20,7 +22,11 @@ var (
 )
 
 func Execute() {
-	err := rootCmd.Execute()
+	err := doc.GenMarkdownTree(rootCmd, "./man")
+	if err != nil {
+		log.Fatal(err)
+	}
+	err = rootCmd.Execute()
 	if err != nil {
 		os.Exit(1)
 	}
@@ -39,6 +45,7 @@ func init() {
 
 	rootCmd.AddCommand(upCmd)
 	rootCmd.AddCommand(getCmd)
+	rootCmd.AddCommand(versionCmd)
 }
 
 func initConfig() {

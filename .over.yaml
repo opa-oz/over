@@ -1,8 +1,12 @@
 package:
   name: over
-  version: "0.0.4"
+  version: "0.1.0"
   default: true
   files:
     - name: README.md
       templates:
         - https://img.shields.io/badge/version-__VERSION__-blue
+        - 'version: "__VERSION__"'
+    - name: cmd/version.go
+      templates:
+        - fmt.Println("__VERSION__")
